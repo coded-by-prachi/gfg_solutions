@@ -1,0 +1,17 @@
+class Solution {
+  public:
+    string reverseString(string& s) {
+        // code here
+        stack<char>st;
+        for(char ch: s){
+            st.push(ch);
+        }
+        
+        string result = " ";
+        while(!st.empty()){
+            result+= st.top();
+            st.pop();
+        }
+        return result;
+    }
+};
